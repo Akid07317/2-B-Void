@@ -1,0 +1,49 @@
+test_completion_releases_reservations_without_inventing_time (test_manual.ManualTests.test_completion_releases_reservations_without_inventing_time) ... ok
+test_dependency_must_be_fully_reserved_before_child (test_manual.ManualTests.test_dependency_must_be_fully_reserved_before_child) ... ok
+test_event_and_block_conflicts_roll_back (test_manual.ManualTests.test_event_and_block_conflicts_roll_back) ... ok
+test_grid_window_capacity_cutoff_and_overallocation (test_manual.ManualTests.test_grid_window_capacity_cutoff_and_overallocation) ... ok
+test_lock_and_explicit_unschedule (test_manual.ManualTests.test_lock_and_explicit_unschedule) ... ok
+test_midnight_is_valid_end_boundary (test_manual.ManualTests.test_midnight_is_valid_end_boundary) ... ok
+test_move_resize_and_undo_survive_restart (test_manual.ManualTests.test_move_resize_and_undo_survive_restart) ... ok
+test_quick_entry_does_not_bypass_timebox_checkpoint (test_manual.ManualTests.test_quick_entry_does_not_bypass_timebox_checkpoint) ... ok
+test_quick_entry_keeps_explicit_estimate_without_fake_criterion (test_manual.ManualTests.test_quick_entry_keeps_explicit_estimate_without_fake_criterion) ... ok
+test_timebox_still_requires_checkpoint (test_manual.ManualTests.test_timebox_still_requires_checkpoint) ... ok
+test_undo_token_revision_and_time_are_guarded (test_manual.ManualTests.test_undo_token_revision_and_time_are_guarded) ... ok
+test_unrelated_action_invalidates_undo (test_manual.ManualTests.test_unrelated_action_invalidates_undo) ... ok
+test_buffer_default (test_planner.PlannerTests.test_buffer_default) ... ok
+test_changed_estimate_recomputes_padding (test_planner.PlannerTests.test_changed_estimate_recomputes_padding) ... ok
+test_complete_two_tasks_not_empty (test_planner.PlannerTests.test_complete_two_tasks_not_empty) ... ok
+test_cross_midnight (test_planner.PlannerTests.test_cross_midnight) ... ok
+test_direct_remaining_not_double_subtracted (test_planner.PlannerTests.test_direct_remaining_not_double_subtracted) ... ok
+test_due_late_cutoff_valid (test_planner.PlannerTests.test_due_late_cutoff_valid) ... ok
+test_fixed_event_union (test_planner.PlannerTests.test_fixed_event_union) ... ok
+test_graph_cycle (test_planner.PlannerTests.test_graph_cycle) ... ok
+test_incomplete_cutoff_no_new_partial (test_planner.PlannerTests.test_incomplete_cutoff_no_new_partial) ... ok
+test_independent_validator_rejects_overlap (test_planner.PlannerTests.test_independent_validator_rejects_overlap) ... ok
+test_non_split_cannot_use_fragments (test_planner.PlannerTests.test_non_split_cannot_use_fragments) ... ok
+test_only_complete_short_tail (test_planner.PlannerTests.test_only_complete_short_tail) ... ok
+test_overload_returns_partial (test_planner.PlannerTests.test_overload_returns_partial) ... ok
+test_protection_conflict_and_authorized_adjustment (test_planner.PlannerTests.test_protection_conflict_and_authorized_adjustment) ... ok
+test_replan_retains_ids (test_planner.PlannerTests.test_replan_retains_ids) ... ok
+test_rescue_partial_explicit (test_planner.PlannerTests.test_rescue_partial_explicit) ... ok
+test_rounding_and_short_tail (test_planner.PlannerTests.test_rounding_and_short_tail) ... ok
+test_running_stops_same_day_promises (test_planner.PlannerTests.test_running_stops_same_day_promises) ... ok
+test_shared_dependency (test_planner.PlannerTests.test_shared_dependency) ... ok
+test_timebox_zero_requires_checkpoint (test_planner.PlannerTests.test_timebox_zero_requires_checkpoint) ... ok
+test_timer_pause_actual_only (test_planner.PlannerTests.test_timer_pause_actual_only) ... ok
+test_unknown_execution_holds_not_coverage (test_planner.PlannerTests.test_unknown_execution_holds_not_coverage) ... ok
+test_failed_transaction_rolls_back (test_planner.StoreTests.test_failed_transaction_rolls_back) ... ok
+test_http_smoke_and_origin (test_planner.StoreTests.test_http_smoke_and_origin) ... 127.0.0.1 - - [23/Sep/2026 00:06:22] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [23/Sep/2026 00:06:22] "GET /api/state HTTP/1.1" 200 -
+127.0.0.1 - - [23/Sep/2026 00:06:22] "POST /api/preview HTTP/1.1" 403 -
+ok
+test_idempotency_and_restart (test_planner.StoreTests.test_idempotency_and_restart) ... ok
+test_log_overlap_is_atomic (test_planner.StoreTests.test_log_overlap_is_atomic) ... ok
+test_old_revision_rejected (test_planner.StoreTests.test_old_revision_rejected) ... ok
+test_plan_apply_and_expiry (test_planner.StoreTests.test_plan_apply_and_expiry) ... ok
+test_three_domain_workflow_persists_after_reopen (test_planner.StoreTests.test_three_domain_workflow_persists_after_reopen) ... ok
+
+----------------------------------------------------------------------
+Ran 41 tests in 0.662s
+
+OK

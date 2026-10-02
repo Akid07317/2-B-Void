@@ -1,0 +1,19 @@
+{
+  "README.md": "9abc2c87cc436fd437273a0c1f91a703b62b154630365401cc78fd256be06710",
+  "docs/STATUS_CN.md": "122e80073d61cc1f3daff992d28938ada040b219dc4223f9763bc63e7ceaa8f2",
+  "docs/day-v2-test-output.txt": "c9622e8d7049229a3bc7ce2b32145c88baa9ce2cef975ad8a72d5fd377b9ab1f",
+  "docs/日计划接入与验证_2026-09-23.md": "044e065e38a94c0b927d174663327ae88736ea15551e1f5f4c85ce16bba19174",
+  "planner/__init__.py": "be4be427ad74933453f560df0a721b2ed8ff30934261df5f8d509043da2c3960",
+  "planner/domain.py": "52aa75472e00d3d05df1592a937f8001da5612c72597a33c6ca429c65a7862c0",
+  "planner/manual.py": "b2a3b9dafcd045afdb31a53262b69ddfe84d93190207b34ed0c72e2649ba2265",
+  "planner/scheduler.py": "f3c55ca11f461606ab70892abace0c841e776f880affc4f213e3dfccbead9d5e",
+  "planner/server.py": "6f0721687c05908efc84548920dec816f032b09e2d00f2e92fc7cab0f049ad17",
+  "planner/static/app.js": "6d04659b548e07defc7f92153d04083df169f532ade88927776b104aaa5570ef",
+  "planner/static/day.css": "ce1d11cf245b3adf65d7acc99f5d9be395ccfaf2d80d1a6820c5d5ad25175255",
+  "planner/static/day.js": "0d09362d21c79c6fdc4e3f7ff2f6d6bb0a133b0cf94b603698be8b6ef65d215c",
+  "planner/static/index.html": "37463742e26ce20ecb1b30a34f4aebb8dd0017c492863f1e32719c1801d03334",
+  "planner/static/style.css": "e6fbafc8500568fde26b4ea066d6171e66e304bb3149606944aed2c970d97946",
+  "planner/store.py": "395039983ef81510158652ad69f5ecc34d72192694c48c0d96f4a12a813db56d",
+  "tests/test_manual.py": "67fb1a0c75659adeb3bd7732080ef68f26c0efd17eecfc847999b1bec68afd6d",
+  "tests/test_planner.py": "d74676115dde7d0576fa7f062ea151f8e244e879b6ec144e2ad54076f4712cd6"
+}

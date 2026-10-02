@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>留白 · 交互对照</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./study.css">
+  <script src="./study.js" defer></script>
+</head>
+<body>
+<svg class="symbols" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="m9 5 10 7-10 7Z"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+  <symbol id="i-stop" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="m14 6-6 6 6 6"/></symbol>
+  <symbol id="i-next" viewBox="0 0 24 24"><path d="m10 6 6 6-6 6"/></symbol>
+  <symbol id="i-replay" viewBox="0 0 24 24"><path d="M4 10a8 8 0 1 1 1 8M4 4v6h6"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="16" rx="3"/><path d="M8 3v4m8-4v4M4 11h16M8 15h3"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M10 6h10M10 12h10M10 18h10m-16-12h1m-1 6h1m-1 6h1"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-grip" viewBox="0 0 24 24"><path d="M9 5h.1M15 5h.1M9 12h.1M15 12h.1M9 19h.1M15 19h.1" stroke-width="3"/></symbol>
+  <symbol id="i-more" viewBox="0 0 24 24"><path d="M5 12h.1M12 12h.1M19 12h.1" stroke-width="3"/></symbol>
+</defs></svg>
+
+<div class="study-bar">
+  <div class="study-name">留白 <span>交互样板 · 示例数据</span></div>
+  <div class="variant-switch" role="group" aria-label="设计方向"><span class="variant-plate"></span>
+    <button data-variant="a" aria-pressed="false"><b>A</b> 静纸</button>
+    <button data-variant="b" aria-pressed="true"><b>B</b> 流光</button>
+  </div>
+  <div class="study-actions"><button id="replay" class="quiet"><svg><use href="#i-replay"/></svg><span>重播入场</span></button><label class="reduced-label"><input id="reduce" type="checkbox">减少动态</label></div>
+</div>
+
+<div id="app" data-variant="b">
+  <nav class="rail" aria-label="快捷导航">
+    <div class="brand" aria-label="留白">白<span></span></div>
+    <button class="rail-button current" id="nav-day" aria-label="查看课表"><svg><use href="#i-calendar"/></svg></button>
+    <button class="rail-button" id="nav-tasks" aria-label="查看待安排任务"><svg><use href="#i-list"/></svg></button>
+    <button class="rail-button" id="nav-focus" aria-label="查看专注计时"><svg><use href="#i-clock"/></svg></button>
+    <div class="rail-bottom">留<br>一<br>点<br>白</div>
+  </nav>
+
+  <main class="workspace">
+    <header class="page-header">
+      <div><div class="eyebrow">我的学习日</div><h1 id="page-title">今天<span class="title-dot">.</span></h1></div>
+      <div class="header-right"><div class="date-navigation"><button id="prev" class="icon-button" aria-label="前一天"><svg><use href="#i-back"/></svg></button><span id="date-label">9 月 23 日 · 星期三</span><button id="next" class="icon-button" aria-label="后一天"><svg><use href="#i-next"/></svg></button></div>
+      <button id="new-task" class="primary"><svg><use href="#i-plus"/></svg>新建任务</button></div>
+    </header>
+
+    <section class="overview entrance" aria-label="今日概览">
+      <div><span class="metric-label">已完成</span><strong id="completed">0 <small>/ 7</small></strong></div>
+      <div><span class="metric-label">实际专注</span><strong id="actual">00:37:18</strong></div>
+      <div><span class="metric-label">未安排时段 <small>08–20 时</small></span><strong id="capacity">05<small>小时</small> 30<small>分钟</small></strong></div>
+      <div class="day-note">把重要的事，<br>放进今天。</div>
+    </section>
+
+    <div class="work-columns">
+      <section class="schedule entrance" aria-label="当天课表">
+        <div class="section-heading"><h2>时间安排</h2><div class="day-segments" role="group" aria-label="切换日期"><span class="day-plate"></span><button data-day="-1">昨天</button><button data-day="0" aria-pressed="true">今天</button><button data-day="1">明天</button></div></div>
+        <div class="calendar-scroll" id="calendar-scroll">
+          <div class="calendar" id="calendar"><div id="hour-labels" class="hour-labels"></div><div id="timeline" class="timeline" aria-label="08:00 至 20:00 的时间网格"><div id="drop-preview" class="drop-preview" hidden><span></span></div><div class="empty-day" id="empty-day" hidden>今天还有很多可能。<small>从右侧安排一件事开始。</small></div></div></div>
+        </div>
+        <div class="calendar-caption"><span>拖动任务安排时间</span><span>⌥ 精确到分钟 · ↑ ↓ 微调</span></div>
+      </section>
+
+      <aside class="planning entrance" aria-label="任务与专注">
+        <div class="section-heading"><h2>待安排 <span id="queue-count">3</span></h2><button id="queue-add" class="icon-button" aria-label="添加待安排任务"><svg><use href="#i-plus"/></svg></button></div>
+        <form id="composer" hidden><label for="task-title">新的学习任务</label><input id="task-title" placeholder="想完成什么？" maxlength="100" autocomplete="off"><div><label>计划 <input id="task-duration" type="number" min="5" max="180" value="45" step="1"> 分钟</label><button class="primary" type="submit">添加</button><button class="icon-button" id="cancel-compose" type="button" aria-label="取消添加"><svg><use href="#i-close"/></svg></button></div></form>
+        <div id="queue" class="queue"></div>
+        <section class="focus-area" id="focus-area" aria-label="专注计时">
+          <div class="focus-heading"><span class="focus-led" id="focus-led"></span><h2 id="focus-status">留一段专注</h2><span class="focus-foliage">◌</span></div>
+          <div id="focus-idle"><p>从一件小事开始。</p><span id="focus-suggestion">选择任务，留出一段不被打扰的时间。</span><button id="quick-focus" class="focus-start"><svg><use href="#i-play"/></svg><span>开始专注</span></button></div>
+          <div id="focus-active" hidden><h3 id="focus-task"></h3><div id="clock" class="clock">00:00:00</div><div class="timer-meta"><span>实际计时</span><span id="focus-plan"></span></div><div class="focus-buttons"><button id="pause-focus" class="primary"><svg><use href="#i-pause"/></svg><span>暂停</span></button><button id="end-focus" class="secondary"><svg><use href="#i-stop"/></svg>结束</button></div></div>
+          <div id="session-receipt" hidden><span>这一段，已留下。</span><strong id="receipt-time"></strong><small id="receipt-task"></small></div>
+        </section>
+        <section class="task-summary"><div class="section-heading"><h2>今日任务</h2><span id="task-total"></span></div><div class="progress-track"><span id="progress-fill"></span></div><div id="completed-list"></div></section>
+      </aside>
+    </div>
+  </main>
+</div>
+
+<section id="inspector" class="inspector" role="dialog" aria-labelledby="detail-title" hidden>
+  <div class="inspector-top"><span id="detail-category">学习任务</span><button id="close-detail" class="icon-button" aria-label="关闭任务详情"><svg><use href="#i-close"/></svg></button></div>
+  <div class="inspector-content"><h2 id="detail-title"></h2><p id="detail-description"></p><div class="detail-tags"><span id="detail-state"></span><span id="detail-actual"></span></div>
+  <form id="time-form"><div class="time-fields"><label>开始<input id="start-time" type="time" required step="60"></label><span>—</span><label>结束<input id="end-time" type="time" required step="60"></label></div><p id="time-error" role="alert"></p><button id="save-time" type="submit" class="secondary wide">安排到这个时段<svg><use href="#i-arrow"/></svg></button></form>
+  <div class="detail-actions"><button id="detail-focus" class="primary"><svg><use href="#i-play"/></svg>开始专注</button><button id="detail-complete" class="secondary"><svg><use href="#i-check"/></svg><span>完成</span></button></div><button id="unschedule" class="text-button">移回待安排</button></div>
+</section>
+<div id="peek" class="peek" role="tooltip" hidden><span id="peek-label"></span><strong id="peek-title"></strong><p id="peek-description"></p><small id="peek-time"></small></div>
+<div id="context-menu" class="context-menu" hidden><button data-menu="detail">查看与编辑时间</button><button data-menu="focus">开始专注</button><button data-menu="complete">完成任务</button></div>
+<div id="toast" class="toast" role="status" hidden><svg><use href="#i-check"/></svg><span id="toast-text"></span><button id="undo" hidden>撤销</button><button id="dismiss-toast" class="icon-button" aria-label="关闭提示"><svg><use href="#i-close"/></svg></button></div>
+<div id="announcer" class="sr-only" aria-live="polite"></div>
+</body></html>

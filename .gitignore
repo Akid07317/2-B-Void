@@ -1,0 +1,64 @@
+# Python / Node 开发产物
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+coverage/
+.pytest_cache/
+playwright-report/
+test-results/
+
+# 本机数据、凭据与系统文件
+/data/
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+*.log
+
+# 历史评审副本和设计备份留在本机
+/review_exports/
+/review_imports/
+/design/checkpoints/
+
+# 个人学习资料及其生成器；保留原位置，避免破坏本地引用
+/2026秋季学习安排_执行版.md
+/主课学习卡_网课与刷题.md
+/六级600与LLM基础_个性化方案.md
+/学习周表_核对数据.json
+/教材与设备补充_2026-09-22.md
+/数学竞赛_完整首轮进度.md
+/数学竞赛课程_课时核算.md
+/每周学习时间表.md
+/生成学习周表.py
+/生成竞赛全课进度.py
+/竞赛课时核算.py
+/竞赛课程_截图转录.json
+/打包联合评审.py
+
+# 早期对话报告和图表导出；不是应用运行依赖
+/artifact.json
+/大学生学业规划软件_首轮背景调查.html
+/大学生学业规划软件_首轮背景调查.md
+/学习安排方法_学术与产业广泛调查_2026-09-21.html
+/学习安排方法_学术与产业广泛调查_2026-09-21.md
+/学习安排调查_artifact.json
+/学习安排调查_候选清单.json
+/学习安排调查_核验说明.md
+/学习安排调查_范围统计.sql
+/学生规模图表数据.sql
+/调研来源与核验说明.md
+
+# 含个人事实、上传材料引用或原始评审内容的内部文档
+/docs/个人学期工作台_重设计建议.md
+/docs/DeepResearch_学术学习方法广泛筛查提示词.md
+/docs/DeepResearch报告_审查与下一步调查判断_2026-09-23.md
+/docs/GPT6Pro_联合评审提示词_2026-09-23.md
+/docs/联合评审_用户事实与任务_2026-09-23.md
+/docs/系统闭环评审包_2026-09-23.md
+/docs/独立评审_复核与采纳意见_2026-09-23.md
